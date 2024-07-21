@@ -1,0 +1,77 @@
+﻿@model List<ShoppingCenter.Web.Models.Product>
+
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <a asp-controller="Products" asp-action="Details" asp-route-point="@product.Category" asp-route-barcode="@product.Meta.Barcode">
+                        <img src="@product.Images.FirstOrDefault()" class="card-img-top" alt="@product.Title" style="object-fit: contain; width: 100%; height: 200px;">
+                    </a>
+                    <div class="card-header">
+                        <h5 class="card-title">@product.Title</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="rating">
+                                <div class="stars" style="width: @(product.Rating / 5 * 100)%"></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item"><b>@product.Price $</b></li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .card-header, .list-group-item {
+        background-color: #f8f9fa;
+    }
+
+    .card-title {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .list-group-item {
+        border: none;
+    }
+
+    .card {
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .rating {
+        position: relative;
+        display: inline-block;
+        font-size: 1.5rem;
+        color: #FFD700;
+    }
+
+    .rating .stars {
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        color: #FFD700;
+    }
+
+    .rating::before {
+        content: '★★★★★';
+        color: #e0e0e0;
+        display: block;
+    }
+
+    .rating .stars::after {
+        content: '★★★★★';
+        display: block;
+    }
+</style>

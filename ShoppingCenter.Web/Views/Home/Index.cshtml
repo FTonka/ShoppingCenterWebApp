@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ShoppingCenter.Web.Models.Category>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var category in Model)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-folder-fill display-1 text-primary"></i> 
+                        <h5 class="card-title mt-3">@category.Name</h5>
+                        <a href="@Url.Action("Index", "Products", new { point = category.Slug })" class="stretched-link"></a> 
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<style>
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.card-body i {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+</style>

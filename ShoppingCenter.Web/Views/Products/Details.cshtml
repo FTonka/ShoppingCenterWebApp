@@ -1,0 +1,176 @@
+﻿@model ShoppingCenter.Web.Models.Product
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="display-4">@Model.Title</h2>
+            <p class="lead">@Model.Description</p>
+            <img src="@Model.Images.FirstOrDefault()" alt="Alternate Text" class="img-fluid product-image" />
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">Category:</th>
+                        <td>@Model.Category</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Price:</th>
+                        <td>$@Model.Price</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Discount:</th>
+                        <td>@Model.DiscountPercentage% off</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rating:</th>
+                        <td>@Model.Rating</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Stock:</th>
+                        <td>@Model.Stock</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Brand:</th>
+                        <td>@Model.Brand</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th scope="row">SKU:</th>
+                        <td>@Model.Sku</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Weight:</th>
+                        <td>@Model.Weight lbs</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dimensions:</th>
+                        <td>
+                            <ul class="list-unstyled mb-0">
+                                <li><strong>Width:</strong> @Model.Dimensions.Width</li>
+                                <li><strong>Height:</strong> @Model.Dimensions.Height</li>
+                                <li><strong>Depth:</strong> @Model.Dimensions.Depth</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Warranty Information:</th>
+                        <td>@Model.WarrantyInformation</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Shipping Information:</th>
+                        <td>@Model.ShippingInformation</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Availability:</th>
+                        <td>@Model.AvailabilityStatus</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Return Policy:</th>
+                        <td>@Model.ReturnPolicy</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Minimum Order Quantity:</th>
+                        <td>@Model.MinimumOrderQuantity</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <h3 class="text-center">Reviews</h3>
+            <div class="list-group">
+                @foreach (var review in Model.Reviews)
+                {
+                    <div class="list-group-item">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">@review.ReviewerName</h5>
+                            <small>@review.Date.ToString("yyyy-MM-dd")</small>
+                        </div>
+                        <p class="mb-1"><strong>Rating:</strong> @review.Rating</p>
+                        <p class="mb-1">@review.Comment</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: contain;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+    .table th {
+        width: 40%;
+    }
+
+    .list-group-item {
+        background-color: #f8f9fa;
+        border: none;
+        margin-bottom: 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+        .list-group-item strong {
+            font-weight: bold;
+        }
+
+        .list-group-item ul {
+            padding-left: 0;
+        }
+
+            .list-group-item ul li {
+                list-style: none;
+            }
+
+    .display-4 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .lead {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+
+    .list-group-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .list-group-item:hover {
+        background-color: #e9ecef;
+    }
+
+    h3.text-center {
+        margin-bottom: 1.5rem;
+    }
+
+    .list-group-item .mb-1 {
+        margin-bottom: 0.5rem;
+    }
+</style>
