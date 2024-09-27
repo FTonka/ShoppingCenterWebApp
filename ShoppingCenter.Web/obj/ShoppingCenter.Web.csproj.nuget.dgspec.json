@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fetta\\Desktop\\ShoppingCenter\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj": {}
+    "C:\\Users\\fetta\\Desktop\\ShoppingCenterWebApp\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fetta\\Desktop\\ShoppingCenter\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj": {
+    "C:\\Users\\fetta\\Desktop\\ShoppingCenterWebApp\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fetta\\Desktop\\ShoppingCenter\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj",
+        "projectUniqueName": "C:\\Users\\fetta\\Desktop\\ShoppingCenterWebApp\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj",
         "projectName": "ShoppingCenter.Web",
-        "projectPath": "C:\\Users\\fetta\\Desktop\\ShoppingCenter\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj",
+        "projectPath": "C:\\Users\\fetta\\Desktop\\ShoppingCenterWebApp\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj",
         "packagesPath": "C:\\Users\\fetta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fetta\\Desktop\\ShoppingCenter\\ShoppingCenter.Web\\obj\\",
+        "outputPath": "C:\\Users\\fetta\\Desktop\\ShoppingCenterWebApp\\ShoppingCenter.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"

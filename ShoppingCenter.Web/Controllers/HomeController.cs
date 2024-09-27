@@ -16,8 +16,10 @@ namespace ShoppingCenter.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
+            
             var categories = await _productService.GetProductCategoriesAsync();
             return View(categories);
+            //updated
         }
 
         

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Az0EyR9uBEM=",
+  "dgSpecHash": "cpB5nCGbS/o=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fetta\\Desktop\\ShoppingCenter\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj",
+  "projectFilePath": "C:\\Users\\fetta\\Desktop\\ShoppingCenterWebApp\\ShoppingCenter.Web\\ShoppingCenter.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fetta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
